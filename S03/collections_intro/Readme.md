@@ -130,9 +130,6 @@ empty_tuple = ()
  
 ## slicing 
 
-# Dive into Strings
-## `str` indices 
-
 
 
 # بررسی متد های هر تایپ
