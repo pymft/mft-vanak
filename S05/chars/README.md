@@ -12,7 +12,7 @@
 >>> ord('a'), ord('z')
 (97, 122)
 ```
-
+ 
 ### creating ascii table
 
 ```python

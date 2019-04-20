@@ -1,4 +1,4 @@
-# Dive into Strings
+f# Dive into Strings
 ## `str` indices 
 
 
@@ -31,7 +31,7 @@ text = "Half a bee, philosophically, must ipso facto half not be"
 | `text.strip`  |                              |
 | `text.rstrip`  |                              |
 | `text.lstrip`  |                              |
-| `text.replace`  |                              |
+| `text.replace`  |               words               |
 | `text.expandtabs`  |                              |
 
 
