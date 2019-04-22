@@ -1,6 +1,8 @@
-
-for value in range(5, 10, 2):
-    print(value)
+lim = 10
+for i in range(lim):
+    line = "*" * (i * 2 + 1)
+    line = line.center(lim * 2 + 1)
+    print(line, i)
 
 # int()
 # float
