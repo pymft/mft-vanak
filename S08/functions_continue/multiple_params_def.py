@@ -3,10 +3,15 @@ def distance(p):
     res = dist_2 ** 0.5
     return res
 
-point = (3, 4)
-res_1 = distance((3, 4))
+
+def distance_new(x, y):
+    dist_2 = x ** 2 + y ** 2
+    res = dist_2 ** 0.5
+    return res
+
+
+res_1 = distance_new(3, 4)
 print(res_1)
 
-new_point = (12, 5)
-res_2 = distance(new_point)
+res_2 = distance_new(12, 5 )
 print(res_2)
