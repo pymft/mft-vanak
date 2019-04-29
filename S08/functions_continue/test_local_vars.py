@@ -2,6 +2,9 @@ x = 10000
 
 
 def fun(lst):  # x = 9
+    a = 100
+    b = 200
+
     lst.pop(0)
     return lst
 
