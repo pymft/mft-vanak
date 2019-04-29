@@ -5,6 +5,7 @@ def word_map(text):
 
     for u in uniques:
         res[u] = words.count(u)
+        # res.update({u: words.count(u)})
 
     return res
 
