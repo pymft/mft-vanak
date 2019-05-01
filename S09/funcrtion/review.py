@@ -1,6 +1,7 @@
 num = 0
-
 # nonlocal global
+
+
 def factorial(n):
     global num
     num = num + 1
