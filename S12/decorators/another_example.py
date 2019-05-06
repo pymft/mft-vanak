@@ -27,7 +27,7 @@ new_say_something = add_stars(say_something)
 print(new_echo("hello"))
 print(new_say_hello("John"))
 print(new_say_something())
-#
+
 # print(add_stars(echo, "hello"))
 # print(add_stars(say_hello, "John"))
 #
