@@ -1,23 +1,38 @@
-class Rectangle:
-    def __init__(self, w, h):
-        self.width = w
-        self.height = h
+import math
+
+
+class Parallelogram:
+    def __init__(self, a, b, angle):
+        print("Parallelogram")
+        self.a = a
+        self.b = b
+        self.angle = angle
 
     def calc_area(self):
-        print("rect")
-        return self.width * self.height
+        rad = math.radians(self.angle)
+        height = self.b * math.sin(rad)
+        return self.a * height
+
+    def calc_perimeter(self):
+        return (self.a + self.b) * 2
+
+
+class Rectangle(Parallelogram):
+    def __init__(self, w, h):
+        print("Rectangle")
+        super().__init__(w, h, 90)
+
+
+class Diamond(Parallelogram):
+    def __init__(self, a, angle):
+        print("Diamond")
+        super().__init__(a, a, angle)
 
 
 class Square(Rectangle):
     def __init__(self, a):
-        # Rectangle.__init__(self, a, a)
+        print("Square")
         super().__init__(a, a)
-
-
-    def calc_area(self):
-        print("square")
-        return super().calc_area()
-
 
 
 s = Square(10)
