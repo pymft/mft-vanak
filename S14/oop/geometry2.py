@@ -1,20 +1,37 @@
 import math
 
 
-class Parallelogram:
+class Area:
+    def __get__(self, instance, owner):
+        if type(owner) == Circle:
+            return math.pi * self.radius ** 2
+        rad = math.radians(instance.angle)
+        height = instance.b * math.sin(rad)
+        return instance.a * height
+
+
+class Perimeter:
+    def __get__(self, instance, owner):
+        return (instance.a + instance.b) * 2
+
+
+# TO READ : abstract class
+class Geometry:
+    area = Area()
+    perimeter = Perimeter()
+
+
+class Circle(Geometry):
+    def __init__(self, r):
+        self.radius = r
+
+
+class Parallelogram(Geometry):
     def __init__(self, a, b, angle):
         print("Parallelogram")
         self.a = a
         self.b = b
         self.angle = angle
-
-    def calc_area(self):
-        rad = math.radians(self.angle)
-        height = self.b * math.sin(rad)
-        return self.a * height
-
-    def calc_perimeter(self):
-        return (self.a + self.b) * 2
 
 
 class Rectangle(Parallelogram):
@@ -36,6 +53,5 @@ class Square(Rectangle):
 
 
 s = Square(10)
-print(s.__dict__)
-print(s.calc_area())
-
+# print(s.__dict__)
+print(s.area, s.perimeter)
