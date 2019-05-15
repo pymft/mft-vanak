@@ -23,7 +23,7 @@ def find_all_pats(text, pats):
     return out
 
 
-data = [0.0, 0.7, 1.1, 2.9, 3.1, 3.15, 3.2, 3.4, 4.6, 4.7, 5.0, 5.3, 9.0]
+data = [0.0, 0.7, 1.1, 2.9, 3.1, 3.15, 3.2, 3.4, 4.6, 4.7, 5.0, 5.3, 9.0, 9.1, 10.5]
 
 periods = zip(data[:-1], data[1:])
 durations = map(lambda x: x[1] - x[0], periods)
@@ -32,5 +32,12 @@ line = "".join(descriptions)
 
 print(line)
 pats = ["LSL", "LSSL", "LSSSL", "LSSSSL"]
-res = find_all_pats(line, pats)
-print(res)
+# res = find_all_pats(line, pats)
+for pat in pats:
+    res = find_all(line, pat)
+    print(res)
+    for indx in res:
+        print(pat, data[indx], data[indx+len(pat)])
+        print("--->", data[indx+1], data[indx + len(pat)-1])
+        print(data[indx:indx+len(pat)+1])
+
