@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BMI CALCULATOR</title>
+     <style type="text/css">
+        body {
+            background: #444;
+            font-family: dosis, sans-serif;
+        }
+        h1 {
+            color: #444;
+            font-size: 60px;
+            text-align: center;
+            font-weight: normal;
+            text-transform: uppercase;
+            font-family: lekton, monospace;
+        }
+		h2 {
+			font-weight: normal;
+		}
+        ul {
+       		padding: 0 20px;
+            margin: 0 auto;
+            list-style: none;
+			text-align:center;
+
+        }
+        li {
+            -webkit-border-radius: 80px;
+            -moz-border-radius: 80px;
+            border-radius: 80px;
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            margin: 6px;
+            cursor: pointer;
+        }
+        #container {
+            margin: 100px auto;
+        }
+        #result {
+            text-align: center;
+            color: #666;
+			text-transform: uppercase;
+        }
+        a {
+            text-decoration: none;
+        }
+        .target {
+            color: #0e67f0;
+        }
+        .newgame {
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            background: #ccc;
+            color: #333;
+            width: 150px;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 auto;
+        }
+        .newgame a {
+            color: #333;
+        }
+    	p.tiles {
+    	    color: #555;
+    	    text-align: center;
+    	}
+            p.tiles a {
+                color: #666;
+            }
+    	strong {
+    	    color: #111;
+    	}
+    	.diff {
+    	    color: #555;
+    	}
+    	.clicked {
+    	    cursor: auto;
+    	}
+    </style>
+</head>
+<body>
+
+<form name="form_new" method="post">
+    {{ bmi }}
+    <table>
+        <tr>
+            <td> height</td>
+            <td>
+                <input name="height">
+            </td>
+        </tr>
+        <tr>
+            <td> weight</td>
+            <td>
+               <input name="weight">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="width: 100%">
+                <button type="submit">Compute</button>
+            </td>
+        </tr>
+    </table>
+
+
+
+
+</form>
+
+</body>
+</html>

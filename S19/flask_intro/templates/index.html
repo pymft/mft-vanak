@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<table style="width: 100%; color: red">
+{% for i in range(n) %}
+    <tr>
+        {% for j in range(m) %}
+            {%  if (i * j) % 2 == 0 %}
+                <td> {{ i * j }} </td>
+            {% else %}
+              <td> <b>{{ i * j }}</b> </td>
+            {% endif %}
+        {% endfor %}
+    </tr>
+{% endfor %}
+</table>
+
+
+</body>
+</html>
