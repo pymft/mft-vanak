@@ -36,10 +36,15 @@ class WebBrowser:
     def __repr__(self):
         return "\033[31;2m" + self.url + "\033[0m"
 
+
+
 wb1 = WebBrowser("http://www.python.org")
 wb2 = WebBrowser("http://www.python.org")
 
-
+try:
+    print(wb1.links[1].links)
+except urllib.error.URLError:
+    print("cannot open page")
 
 #
 # for i in range(10):

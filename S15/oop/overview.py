@@ -1,5 +1,7 @@
 class Temperature:
     def __init__(self, fahrenheit):
+        if type(fahrenheit) not in [float, int]:
+            raise ValueError
         self.fahrenheit = fahrenheit
 
     @property
@@ -11,14 +13,17 @@ class Temperature:
         self.fahrenheit = (value * (9 / 5)) + 32
 
 
-t1 = Temperature(32)
-print(t1.fahrenheit)
-print(t1.celsius)
+try:
+    t1 = Temperature("a")
+    print(t1.fahrenheit)
+    print(t1.celsius)
 
-t1.celsius = 100
-print(t1.fahrenheit)
-print(t1.celsius)
+    t1.celsius = 100
+    print(t1.fahrenheit)
+    print(t1.celsius)
 
-t1.fahrenheit = 100
-print(t1.fahrenheit)
-print(t1.celsius)
+    t1.fahrenheit = 100
+    print(t1.fahrenheit)
+    print(t1.celsius)
+except ValueError:
+    print("unsupported type for temperature")
